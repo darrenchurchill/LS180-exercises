@@ -1,31 +1,33 @@
-# Launch School Template Repository
+# Launch School Exercises
 
-## Instructions
+## LS180 - SQL Fundamentals
 
-1. Create a new repository from this template.
-2. Clone the repository to your local workspace.
-3. `npm install` the template’s provided dependencies.
-4. Replace this `README`s content with your modified content from one of the
-   example `README`s.
-5. Install any additional required dependencies and set them up if needed:
+These are my solutions to the LS180
+[exercises](https://launchschool.com/exercises?track=javascript#javascript-ls180_sql_fundamentals).
 
-    Ex: For Jest...
+__Note__: The link will only work if you're signed into your Launch School
+account.
 
-    Run:
+### Requirements
 
-    ```console
-    npm install --save-dev jest @types/jest
-    ```
+- `postgresql`
 
-    And add the following section to your `package.json`:
+I installed `postgresql@16` with Homebrew.
 
-    ```json
-    {
-        // NOTE: "scripts" is a property of the top level object
-        "scripts": {
-            "test": "jest"
-        }
-    }
-    ```
+```shell
+brew install postgresql@16
+```
 
-6. Use any of the example files’ header comments you’d like.
+### Setup
+
+Clone repository and create any necessary databases with `createdb`. Some of
+those `createdb`'s might be shell scripts inside the exercise directories.
+
+### Sections
+
+1. Easy 1
+2. DML, DDL, and DCL
+3. DDL (Data Definition Language)
+4. DML (Data Manipulation Language)
+5. Medium: Many to Many
+6. Medium: Subqueries and More

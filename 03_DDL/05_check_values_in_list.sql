@@ -19,5 +19,7 @@ DROP CONSTRAINT IF EXISTS stars_spectral_type_check
 ALTER TABLE stars
 ALTER spectral_type
 SET NOT NULL,
-ADD CHECK (regexp_like ('OBAFGKM', spectral_type))
+ADD CHECK (
+  spectral_type IN ('O', 'B', 'A', 'F', 'G', 'K', 'M')
+)
 ;

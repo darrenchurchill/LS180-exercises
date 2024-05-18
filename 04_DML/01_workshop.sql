@@ -27,6 +27,6 @@ CREATE TABLE devices (
 CREATE TABLE parts (
   id serial PRIMARY KEY,
   part_number int UNIQUE NOT NULL,
-  device_id int NOT NULL REFERENCES devices (id)
+  device_id int REFERENCES devices (id)
 )
 ;

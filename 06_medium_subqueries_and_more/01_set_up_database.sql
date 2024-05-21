@@ -24,8 +24,8 @@ CREATE TABLE bidders (id serial PRIMARY KEY, name text NOT NULL)
 CREATE TABLE items (
   id serial PRIMARY KEY,
   name text NOT NULL,
-  initial_price numeric(6, 2) NOT NULL,
-  sales_price numeric(6, 2)
+  initial_price numeric(6, 2) NOT NULL CHECK (initial_price BETWEEN 0.01 AND 1000),
+  sales_price numeric(6, 2) CHECK (sales_price BETWEEN 0.01 AND 1000)
 )
 ;
 
@@ -34,7 +34,7 @@ CREATE TABLE bids (
   id serial PRIMARY KEY,
   bidder_id int NOT NULL REFERENCES bidders (id) ON DELETE CASCADE,
   item_id int NOT NULL REFERENCES items (id) ON DELETE CASCADE,
-  amount numeric(6, 2) NOT NULL
+  amount numeric(6, 2) NOT NULL CHECK (amount BETWEEN 0.01 AND 1000)
 )
 ;
 

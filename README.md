@@ -25,10 +25,10 @@ those `createdb`'s might be shell scripts inside the exercise directories.
 
 ### Sections
 
+Many `sql` files include schema-modifying statements. Generally, numbered files
+in each section should be executed in order by number.
+
 1. Easy 1
-
-    These should all be executed in order by filename.
-
 2. DML, DDL, and DCL
 3. DDL (Data Definition Language)
 4. DML (Data Manipulation Language)
